@@ -95,12 +95,12 @@ function dataSplit(lyrics){
 function loadLyrics(){
 const track=trackInput.value();
 const artist=artistInput.value();
-loadJSON('http://api.musixmatch.com/ws/1.1/track.search?q_track='+track+'&q_artist='+artist+'&f_has_lyrics=1&apikey=828251934ab71bde5ddf79419d12a713',searchLyrics);
+loadJSON('https://api.musixmatch.com/ws/1.1/track.search?q_track='+track+'&q_artist='+artist+'&f_has_lyrics=1&apikey=828251934ab71bde5ddf79419d12a713',searchLyrics);
 
 
 }
 function chartLyrics(){
-  loadJSON('http://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page=1&country=us&f_has_lyrics=1&apikey=828251934ab71bde5ddf79419d12a713',searchLyrics);
+  loadJSON('https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page=1&country=us&f_has_lyrics=1&apikey=828251934ab71bde5ddf79419d12a713',searchLyrics);
 }
 
 function searchLyrics(search){
