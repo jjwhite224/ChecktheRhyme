@@ -95,12 +95,12 @@ function dataSplit(lyrics){
 function loadLyrics(){
 const track=trackInput.value();
 const artist=artistInput.value();
-loadJSON('https://api.musixmatch.com/ws/1.1/track.search?q_track='+track+'&q_artist='+artist+'&f_has_lyrics=1&apikey=828251934ab71bde5ddf79419d12a713/enableCORS',searchLyrics);
+loadJSON('https://api.musixmatch.com/ws/1.1/track.search?q_track='+track+'&q_artist='+artist+'&f_has_lyrics=1&apikey=828251934ab71bde5ddf79419d12a713',searchLyrics);
 
 
 }
 function chartLyrics(){
-  loadJSON('https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page=1&country=us&f_has_lyrics=1&apikey=828251934ab71bde5ddf79419d12a713/enableCORS',searchLyrics);
+  loadJSON('https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page=1&country=us&f_has_lyrics=1&apikey=828251934ab71bde5ddf79419d12a713',searchLyrics);
 }
 
 function searchLyrics(search){
@@ -112,8 +112,8 @@ function searchLyrics(search){
   textSize(30);
   text(trackname,width/2,height/2);
   console.log(trackId);
-  loadJSON("https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id="+trackId+"&apikey=828251934ab71bde5ddf79419d12a713/enableCORS",getLyrics);
-  loadJSON("https://api.musixmatch.com/ws/1.1/album.get?album_id="+albumID+"&apikey=828251934ab71bde5ddf79419d12a713/enableCORS",getAlbum);
+  loadJSON("https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id="+trackId+"&apikey=828251934ab71bde5ddf79419d12a713",getLyrics);
+  loadJSON("https://api.musixmatch.com/ws/1.1/album.get?album_id="+albumID+"&apikey=828251934ab71bde5ddf79419d12a713",getAlbum);
 }
 
 function getLyrics(lyricData){
