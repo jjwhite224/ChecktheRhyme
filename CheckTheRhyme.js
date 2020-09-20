@@ -25,7 +25,7 @@ function setup(){
     trackButton.position(trackInput.x+110,480);
     chartButton = createButton('#1 Searched Lyric');
     chartButton.position(trackButton.x,500);
-    createCanvas(displayWidth,800);
+    createCanvas(displayWidth,displayHeight);
   }
 
 function draw(){
