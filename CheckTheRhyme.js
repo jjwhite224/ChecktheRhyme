@@ -78,7 +78,10 @@ function dataSplit(lyrics){
   }
   for (let i=0;i<stanzaList.length;i++){
       wordCollector=split(stanzaList[i],' ');
+      if(i="I"){
+      }else{
       append(wordList,wordCollector)
+      }
       }
 
   for (let i=0;i<wordList.length;i++){
